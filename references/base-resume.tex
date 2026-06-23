@@ -1,0 +1,140 @@
+\documentclass[a4paper,12pt]{article} 
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\usepackage{supertabular}
+\usepackage{titlesec}                
+\usepackage{multicol}
+\usepackage{multirow}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+\usepackage{fontawesome5}
+
+% job listing environments
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+%----------------------------------------------------------------------------------------
+%   BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%   TITLE
+%----------------------------------------------------------------------------------------
+\begin{tabularx}{\linewidth}{@{} C @{} }
+\Huge{Yaswanth Boggarapu} \\[7.5pt]
+\href{https://github.com/Yaswanth-Boggarapu}{\raisebox{-0.05\height}\faGithub\ Yaswanth-Boggarapu} \ $|$ 
+\href{https://linkedin.com/in/yaswanth-boggarapu-a27a5a245}{\raisebox{-0.05\height}\faLinkedin\ yaswanth-boggarapu} \ $|$ 
+\href{mailto:yaswanth7868@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ yaswanth7868@gmail.com} \  
+% \href{tel:+353833319056}{\raisebox{-0.05\height}\faMobile\ +353 833319056} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Summary}
+Aspiring Data Scientist with hands-on experience in AI/ML model development, natural language processing, and big data analytics. Skilled in Python, R, Java, and cloud deployment on GCP. Strong background in building applications with NLP, deep learning, and statistical modeling. Experienced in collaborating on projects involving transformers, LLMs, and scalable deployment strategies.
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2025 -- 2026 & \textbf{MSc in Statistical Data Science}, University College Dublin, Ireland \hfill GPA: 3.28 \\
+2020 -- 2024 & \textbf{B.Tech in Artificial Intelligence \& Data Science}, Mepco Schlenk Engineering College, Sivakasi, TN \hfill GPA: 7.4/10.0 \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Work Experience}
+
+\begin{joblong}{AI/ML Trainee (Part-Time) -- Maghil}{Jan 2024 -- Apr 2026}
+
+\item Automated Gen-AI based review analysis system based on Google's gemini flash 2.0, flash 2.5 and flash 2.5-pro.
+\item Developed and deployed ML models on Google Cloud Platform with the Gemini API, improving deployment efficiency by 70\%
+\item Built a voice ordering bot using Google's speech and language models, enabling end-to-end voice-driven order placement with intent recognition and real-time response generation.
+\item Improved model performance through data preprocessing, feature engineering, and optimization.
+\item Built NLP-based applications such as text summarization and classification.
+\item Developed systems which can generate multimodal data like text, images, videos.
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+%   PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Semantic Analysis on Text Data} & Ongoing \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Developing a Bayesian sentiment analysis workflow for textual data, covering text preprocessing, probabilistic modeling, and evaluation. Bayesian methods provide uncertainty-aware predictions for sentiment classification, offering interpretable insights into underlying patterns across any text dataset.} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{AI based Test Case Generator} & May 2025 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Built Python tool for automated data extraction and processing, demonstrating ability to work with diverse input formats and structured output generation. Applied strong analytical skills to parse complex data structures and ensure output quality.} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{ImageGenAI} & Jan 2025 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Designed an application using Google's Flash that generates multiple visual variations of a food image based solely on the dish name, with automated prompt engineering built in. } \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{PDF.ai} & Oct 2024 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Designed a question-answering application for uploaded PDFs. Used Pinecone for semantic search and Cohere for NLP. Built the interface in Streamlit and enabled Docker deployment.} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Pneumonia Detection with Explainability} & Jun 2023 -- Apr 2024 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Developed a deep learning model for pneumonia detection using chest X-ray images. Applied SHAP and Grad-CAM for explainability. Achieved 100\% accuracy through fine-tuning.} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Automatic Notes Generating System using BERT} & 2023 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Built a system to generate concise notes from medical records using BERT. Implemented with TensorFlow, OpenCV, and Torchvision.} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Programming & Python, R, Java \\
+Frameworks \& Libraries & TensorFlow, PyTorch, Flask, Streamlit, Pandas, NumPy, Hadoop, Spark \\
+Databases & MySQL, PostgreSQL, MongoDB, Cassandra, Neo4j \\
+Analytics \& Visualization & Excel, Orange, Tableau \\
+Cloud Platforms & Google Cloud \\
+Development Tools & GitHub, VSCode, Jupyter \\
+Core Skills & Machine Learning, Deep Learning, NLP, Image Processing, Big Data Analytics \\
+\end{tabularx}
+
+\vfill
+\end{document}
